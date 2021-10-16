@@ -32,8 +32,8 @@ public class InfoTourisme {
 
          System.out.println("Les tests Pour La Classe Voitures ");
          // vs.ajouter(v2);
-        v1.setIdVoiture(1);
-        vs.delete(v1);
+        //v1.setIdVoiture(1);
+        //vs.delete(v1);
          //v1.setIdVoiture(0);
         // v1.setMatricule("157tun1993");
          //v1.setModele("Mercedes");
