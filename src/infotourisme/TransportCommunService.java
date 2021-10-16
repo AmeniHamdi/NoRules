@@ -6,6 +6,7 @@
 package infotourisme;
 
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -49,7 +50,7 @@ public class TransportCommunService implements IService<TransportCommun> {
     }
 
     @Override
-    public boolean delete(TransportCommun v) throws SQLException {
+    public boolean delete(TransportCommun t) throws SQLException {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -58,4 +59,5 @@ public class TransportCommunService implements IService<TransportCommun> {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    
 }

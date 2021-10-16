@@ -18,17 +18,22 @@ public class InfoTourisme {
     public static void main(String[] args)throws SQLException {
         
          Voiture v1 = new Voiture("122Tunis6287", "porshe", 1300,"01/05/2022", 5);
+         Voiture v2 = new Voiture("122Tunis5842", "Wallys", 900,"12/05/2022", 25);
+         Voiture v3 = new Voiture("122Tunis6000", "Megan", 900,"12/05/2023", 30);
+
+         
+
         
          TransportCommun t1=new TransportCommun(80,"train",30);
-         
-         
-         
+         TransportCommun t2=new TransportCommun(90,"Bus",25);
+
          VoitureService vs = new VoitureService();
-         TransportCommunService ts= new TransportCommunService();
+         TransportCommunService ts = new TransportCommunService();
+
          System.out.println("Les tests Pour La Classe Voitures ");
-          //vs.ajouter(v1);
-          //v1.setIdVoiture(0);
-       // vs.delete(v1);
+         // vs.ajouter(v2);
+        v1.setIdVoiture(1);
+        vs.delete(v1);
          //v1.setIdVoiture(0);
         // v1.setMatricule("157tun1993");
          //v1.setModele("Mercedes");
@@ -38,10 +43,20 @@ public class InfoTourisme {
          //vs.update(v1);
          
         System.out.println("Les tests Pour La Classe Transport Commun ");
-
-         ts.ajouter(t1);
         
-         System.out.println(vs.readAll());
+        System.out.println("Ajout ");
+
+         //vs.ajouter(v3);
+         //ts.ajouter(t1);
+        //vs.ajouter(v2);
+                System.out.println("Ajout Transport ");
+
+        // ts.ajouter(t2);
+         //ts.ajouter(t1);
+
+         
+        
+         vs.readAll();
 
 
        

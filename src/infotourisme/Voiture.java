@@ -11,7 +11,7 @@ package infotourisme;
  * @author Ameni Hamdi
  */
 public class Voiture {
-    private int idVoiture;
+    private int idVoiture; 
     private String Matricule;
     private String Modele;
     private float Prix;
