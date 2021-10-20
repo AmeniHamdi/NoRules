@@ -3,15 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package infotourisme;
-
+package infotourisme.entities;
 
 /**
  *
  * @author Ameni Hamdi
  */
 public class Voiture {
-    private int idVoiture; 
+      private int idVoiture; 
     private String Matricule;
     private String Modele;
     private float Prix;
@@ -96,7 +95,4 @@ public class Voiture {
     }
 
     
-   
-     
-     
 }

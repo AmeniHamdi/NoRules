@@ -3,13 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package infotourisme;
-
-/**
- *
- * @author Ameni Hamdi
- */
-
+package infotourisme.services;
+import infotourisme.IService;
+import infotourisme.entities.Voiture;
 
 import infotourisme.InfoTourismeBD;
 import java.sql.Connection;
@@ -19,13 +15,11 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  *
  * @author Ameni Hamdi
  */
-    
-    public class VoitureService implements IService<Voiture> {
+ public class VoitureService implements IService<Voiture> {
 
     Connection cnx;
     Statement ste;

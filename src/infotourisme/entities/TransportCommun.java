@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package infotourisme;
+package infotourisme.entities;
 
 /**
  *
  * @author Ameni Hamdi
  */
 public class TransportCommun {
+    
     private int idTransportCommun;
     private int PrixBillet;
     private String Type;
@@ -67,8 +68,5 @@ public class TransportCommun {
     public String toString() {
         return "TransportCommun{" + "idTransportCommun=" + idTransportCommun + ", PrixBillet=" + PrixBillet + ", Type=" + Type + ", Capacit\u00e9=" + Capacité + '}';
     }
-    
-    
-    
     
 }

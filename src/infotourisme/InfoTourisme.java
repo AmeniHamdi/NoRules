@@ -4,6 +4,12 @@
  * and open the template in the editor.
  */
 package infotourisme;
+import infotourisme.entities.Voiture;
+import infotourisme.entities.TransportCommun;
+import infotourisme.services.TransportCommunService;
+import infotourisme.services.VoitureService;
+
+
 
 import java.sql.SQLException;
 import java.time.Clock;
@@ -20,6 +26,9 @@ public class InfoTourisme {
          Voiture v1 = new Voiture("122Tunis6287", "porshe", 1300,"01/05/2022", 5);
          Voiture v2 = new Voiture("122Tunis5842", "Wallys", 900,"12/05/2022", 25);
          Voiture v3 = new Voiture("122Tunis6000", "Megan", 900,"12/05/2023", 30);
+         Voiture v4 = new Voiture("122Tunis6052", "Renault", 530,"06/05/2023", 28);
+
+         
 
          
 
@@ -31,7 +40,7 @@ public class InfoTourisme {
          TransportCommunService ts = new TransportCommunService();
 
          System.out.println("Les tests Pour La Classe Voitures ");
-         // vs.ajouter(v2);
+         vs.ajouter(v4);
         //v1.setIdVoiture(1);
         //vs.delete(v1);
          //v1.setIdVoiture(0);

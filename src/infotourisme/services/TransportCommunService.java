@@ -3,8 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package infotourisme;
+package infotourisme.services;
+import infotourisme.entities.TransportCommun;
 
+import infotourisme.IService;
+import infotourisme.InfoTourismeBD;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -12,7 +15,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
 /**
  *
  * @author Ameni Hamdi
@@ -61,3 +63,7 @@ public class TransportCommunService implements IService<TransportCommun> {
 
     
 }
+    
+    
+    
+
