@@ -11,7 +11,7 @@ package tn.esprit.reclamation.entities;
  */
 public class Reclamation {
    private int  id_re ; 
-   private String type ; 
+   private String type ;  
    private int id_client ; 
    private String  description ; 
 
