@@ -8,7 +8,7 @@ package tn.esprit.reclamation.gui;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
 
-
+         
 
 public class Afficher {
 private final StringProperty id;
