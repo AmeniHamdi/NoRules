@@ -5,16 +5,20 @@
  */
 package infotourisme.entities;
 
+import java.sql.Date;
+
+
+
 /**
  *
  * @author Ameni Hamdi
  */
 public class Voiture {
-      private int idVoiture; 
+    private int idVoiture; 
     private String Matricule;
     private String Modele;
     private float Prix;
-    private String dateReservation;
+    private Date dateReservation;
     private int nbr_jours ;
     
     
@@ -22,8 +26,7 @@ public class Voiture {
      public Voiture() {
     }
    
-      public Voiture(int idVoiture, String Matricule, String Modele, float Prix , String dateReservation ,int nbr_jours) {
-          
+      public Voiture(int idVoiture, String Matricule, String Modele, float Prix , Date dateReservation ,int nbr_jours) {
         this.idVoiture = idVoiture;
         this.Matricule = Matricule;
         this.Modele = Modele;
@@ -32,7 +35,7 @@ public class Voiture {
         this.nbr_jours = nbr_jours;
     }
       
-     public Voiture( String Matricule, String Modele, float Prix ,String dateReservation ,int nbr_jours) {
+     public Voiture( String Matricule, String Modele, float Prix ,Date dateReservation ,int nbr_jours) {
       
         this.Matricule = Matricule;
         this.Modele = Modele;
@@ -73,11 +76,11 @@ public class Voiture {
         this.Prix = prix;
     }
 
-    public String getDateReservation() {
+    public Date getDateReservation() {
         return dateReservation;
     }
 
-    public void setDateReservation(String dateReservation) {
+    public void setDateReservation(Date dateReservation) {
         this.dateReservation = dateReservation;
     }
 

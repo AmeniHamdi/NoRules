@@ -5,6 +5,8 @@
  */
 package infotourisme;
 
+import infotourisme.entities.ContratAssurance;
+import infotourisme.entities.Voiture;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -15,6 +17,7 @@ public interface IService<T> {
     boolean delete(T v) throws SQLException;
     void update(T v) throws SQLException;
     List<T> readAll() throws SQLException;
+  
 }
 
 

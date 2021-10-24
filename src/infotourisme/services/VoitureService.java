@@ -23,9 +23,10 @@ import java.util.List;
 
     Connection cnx;
     Statement ste;
+     
 
     public VoitureService() throws SQLException {
-        cnx = InfoTourismeBD.getInstance().getConnection();
+         cnx = InfoTourismeBD.getInstance().getConnection();
         ste = cnx.createStatement();
         
     }
@@ -57,7 +58,7 @@ import java.util.List;
             pst.setString(1,v.getMatricule()) ; 
             pst.setString(2, v.getModele()) ;
             pst.setFloat(3, v.getPrix()) ;
-            pst.setString(4, v.getDateReservation()) ;
+            pst.setDate(4, v.getDateReservation()) ;
             pst.setInt(5, v.getNbr_jours()) ;
             pst.setInt(6, v.getIdVoiture()) ;
             pst.executeUpdate (); 
@@ -70,13 +71,15 @@ import java.util.List;
     }
     
     
+     
+    
 
     @Override
     public List<Voiture> readAll() throws SQLException {
         List<Voiture> voitures = new ArrayList<>();
         ResultSet result =  ste.executeQuery("select * from voiture");
         while(result.next()){
-            voitures.add(new Voiture(result.getInt(1), result.getString("Matricule"), result.getString("Modele"), result.getFloat("Prix"), result.getString("dateReservation"), result.getInt("nbr_jours")));
+            voitures.add(new Voiture(result.getInt(1), result.getString("Matricule"), result.getString("Modele"), result.getFloat("Prix"), result.getDate("dateReservation"), result.getInt("nbr_jours")));
         }
         
         return voitures;

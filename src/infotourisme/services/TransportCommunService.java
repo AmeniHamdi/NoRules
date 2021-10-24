@@ -33,7 +33,6 @@ public class TransportCommunService implements IService<TransportCommun> {
     @Override
     
     public void ajouter(TransportCommun t) throws SQLException {
-
         String requeteInsert = "INSERT INTO `transportCommuns` (`idTransportCommun`, `PrixBillet`, `Type`, `Capacité`) VALUES ('" + t.getIdTransportCommun()+ "', '" + t.getPrixBillet()+ "', '" + t.getType()+ "', '" + t.getCapacité()+ "');";
         ste.executeUpdate(requeteInsert);
     }
@@ -53,12 +52,28 @@ public class TransportCommunService implements IService<TransportCommun> {
 
     @Override
     public boolean delete(TransportCommun t) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
+                boolean deleted =false ;
+            String requeteInsert = "delete from transportCommuns where idTransportCommun='" + t.getIdTransportCommun() + "'";
+            ste.executeUpdate(requeteInsert);
+            return deleted ;
+            
     }
 
     @Override
-    public void update(TransportCommun v) throws SQLException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void update(TransportCommun t) throws SQLException {
+           String req="update transportCommuns set PrixBillet=?, Type=? ,Capacité=?  " ;
+        try { 
+            PreparedStatement pst = (PreparedStatement) cnx.prepareStatement(req);
+            pst.setFloat(1,t.getPrixBillet()) ; 
+            pst.setString(2, t.getType()) ;
+            pst.setInt(3, t.getCapacité()) ;
+            pst.setInt(4, t.getIdTransportCommun()) ;
+            pst.executeUpdate (); 
+            System.out.println("Mise à jour  sur Moyens de Transport Commun  effectuée avec succès");
+        } catch (SQLException ex) {
+            System.out.println("erreur lors de la mise à jour " + ex.getMessage());
+        }
     }
 
     
