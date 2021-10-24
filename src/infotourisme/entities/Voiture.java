@@ -44,6 +44,14 @@ public class Voiture {
         this.nbr_jours = nbr_jours;
     } 
 
+    public Voiture(String Modele, float Prix, Date dateReservation, int nbr_jours) {
+        this.Modele = Modele;
+        this.Prix = Prix;
+        this.dateReservation = dateReservation;
+        this.nbr_jours = nbr_jours;
+    }
+     
+
     public int getIdVoiture() {
         return idVoiture;
     }

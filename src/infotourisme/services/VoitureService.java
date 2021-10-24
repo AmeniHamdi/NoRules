@@ -30,7 +30,13 @@ import java.util.List;
         ste = cnx.createStatement();
         
     }
+    
+    
+     public void ajouterVoiture(Voiture v) throws SQLException {
 
+        String requeteInsert = "INSERT INTO `voiture` ( `Modele`, `Prix`,`dateReservation`,`nbr_jours`) VALUES ( '" + v.getModele()+ "', '" + v.getPrix()+ "', '" + v.getDateReservation()+ "','" + v.getNbr_jours()+ "');";
+        ste.executeUpdate(requeteInsert);
+    }
     @Override
     
     public void ajouter(Voiture v) throws SQLException {
