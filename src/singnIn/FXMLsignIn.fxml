@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="singnIn.FXMLsignInController">
+    <stylesheets>
+        <URL value="@fxmlsignin.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="-1.0" prefHeight="407.0" prefWidth="137.0" style="-fx-background-color: cyan;" />
+      <Label fx:id="txtidentif" layoutX="174.0" layoutY="142.0" text="Identifiant:" />
+      <Label fx:id="txtpass" layoutX="174.0" layoutY="231.0" text="Password:" />
+      <TextField layoutX="258.0" layoutY="137.0" />
+      <PasswordField layoutX="258.0" layoutY="226.0" />
+      <Button fx:id="btnconnect" layoutX="300.0" layoutY="318.0" mnemonicParsing="false" text="Connecte" />
+   </children>
+</AnchorPane>
