@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tn.esprit.reclamation.gui;
+package tn.esprit.reclamation.gui1;
 
 import java.io.IOException;
 import javafx.application.Application;
@@ -22,10 +22,10 @@ import javafx.stage.Stage;
  */
 public class Reclama extends Application {
     
-    @Override
+     @Override
     public void start(Stage primaryStage) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource("FXMLreclamation.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("Reclamation.fxml"));
             
             Scene scene = new Scene(root);
             
