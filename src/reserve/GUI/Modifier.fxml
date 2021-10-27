@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="518.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reserve.GUI.ModifierController">
+   <children>
+      <ButtonBar layoutX="444.0" layoutY="301.0" prefHeight="46.0" prefWidth="0.0" />
+      <Accordion />
+      <Accordion />
+      <Accordion layoutX="87.0" layoutY="59.0" />
+      <Label ellipsisString="    " layoutX="59.0" layoutY="169.0" prefHeight="38.0" prefWidth="171.0" text="HEURE DE RESERVATION     : " textFill="#363434">
+         <font>
+            <Font name="System Italic" size="12.800000190734863" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="222.0" prefHeight="46.0" prefWidth="158.0" text="DUREE DE RESERVATION    :" textFill="#1e1b1b" />
+      <Label layoutX="58.0" layoutY="278.0" prefHeight="46.0" prefWidth="165.0" text="DATE DE RESERVATION       :" textFill="#1b1a1a" />
+      <Label layoutX="108.0" layoutY="30.0" prefHeight="58.0" prefWidth="477.0" text="POUR AJOUETR UNE RESERVATION" textFill="#17e873">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txt1" layoutX="233.0" layoutY="174.0" prefHeight="27.0" prefWidth="214.0" promptText="                         ??:??" />
+      <Button layoutX="254.0" layoutY="339.0" mnemonicParsing="false" onAction="#Ajout" prefHeight="38.0" prefWidth="184.0" style="-fx-background-color: green;" text="Modifier reservation " textFill="#222322">
+         <font>
+            <Font name="System Bold" size="15.800000190734863" />
+         </font>
+      </Button>
+      <DatePicker fx:id="datedeb" layoutX="236.0" layoutY="233.0" prefHeight="25.0" prefWidth="214.0" />
+      <DatePicker fx:id="datefin" layoutX="234.0" layoutY="289.0" prefHeight="25.0" prefWidth="214.0" />
+   </children>
+</AnchorPane>

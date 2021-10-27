@@ -7,6 +7,9 @@ package entite;
 
 //import java.util.Date;
 
+import java.sql.Date;
+
+
 /**
  *
  * @author ibrahim
@@ -14,76 +17,88 @@ package entite;
 public class Reservation {
     private int idres;
     private float heureres;
-    private String durres;
-    private  String dateres ;    
+    private Date dutedes;
+    private  Date datefin ;
+    private Date dateRes ;
+    private int id_user ;
+    private int id_voiture ;
+    
+    private String etat ;
+    
     public Reservation (){
     }
 
-    public Reservation(float heureres, String durres, String dateres) {
+    public int getIdres() {
+        return idres;
+    }
+
+    public void setIdres(int idres) {
+        this.idres = idres;
+    }
+
+    public float getHeureres() {
+        return heureres;
+    }
+
+    public void setHeureres(float heureres) {
         this.heureres = heureres;
-        this.durres = durres;
-        this.dateres = dateres;
     }
-    
-    public Reservation (int idres,float heureres,String durres,String dateres){
-    this.idres=idres;
-    this.heureres=heureres;
-    this.durres=durres;
-    this.dateres=dateres;
+
+    public Date getDutedes() {
+        return dutedes;
     }
-    public int getIdres () {
-    return idres ;
+
+    public void setDutedes(Date dutedes) {
+        this.dutedes = dutedes;
     }
-    public void setIdres (int id){
-    this.idres=id ;
+
+    public Date getDatefin() {
+        return datefin;
     }
-    public float getHeureres(){
-    return heureres;
+
+    public void setDatefin(Date datefin) {
+        this.datefin = datefin;
     }
-    public void setHeureres(float heureres){
-    this.heureres=heureres;
+
+    public Date getDateRes() {
+        return dateRes;
     }
-    public String getDurres(){
-    return durres;
+
+    public void setDateRes(Date dateRes) {
+        this.dateRes = dateRes;
     }
-    public void setDurres(String durres){
-        this.durres=durres;
+
+    public int getId_user() {
+        return id_user;
     }
-    public String getDateres(){
-    return dateres;
+
+    public void setId_user(int id_user) {
+        this.id_user = id_user;
     }
-    public void setDateres(String dateres){
-    this.dateres=dateres ;}
+
+    public int getId_voiture() {
+        return id_voiture;
+    }
+
+    public void setId_voiture(int id_voiture) {
+        this.id_voiture = id_voiture;
+    }
+
+    public String getEtat() {
+        return etat;
+    }
+
+    public void setEtat(String etat) {
+        this.etat = etat;
+    }
 
     @Override
     public String toString() {
-        return "Reservation{" + "idres=" + idres + ", heureres=" + heureres + ", durres=" + durres + ", dateres=" + dateres + '}';
+        return "Reservation{" + "idres=" + idres + ", heureres=" + heureres + ", dutedes=" + dutedes + ", datefin=" + datefin + ", dateRes=" + dateRes + ", id_user=" + id_user + ", id_voiture=" + id_voiture + ", etat=" + etat + '}';
     }
 
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 97 * hash + this.idres;
-        return hash;
-    }
 
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Reservation other = (Reservation) obj;
-        if (this.idres != other.idres) {
-            return false;
-        }
-        return true;
-    }
-    
+
+ 
     
 }

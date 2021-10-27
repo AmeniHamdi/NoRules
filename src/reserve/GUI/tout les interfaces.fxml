@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="reserve.GUI.ToutLesInterfacesController">
+   <children>
+      <Label layoutX="111.0" layoutY="26.0" prefHeight="58.0" prefWidth="278.0" text="LES OPTIONS DISPONOBLE  !!">
+         <font>
+            <Font name="Arial Bold" size="17.800000190734863" />
+         </font>
+      </Label>
+      <Button layoutX="10.0" layoutY="230.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="270.0" text="POUR MODIFIER UN RESERVATION :" textFill="#32a5df">
+         <font>
+            <Font name="System Bold" size="12.800000190734863" />
+         </font>
+      </Button>
+      <Button layoutX="300.0" layoutY="230.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="270.0" text="POUR AFFICHER LES LISTES DE RESERVATION :" textFill="#8041d1">
+         <font>
+            <Font name="System Bold" size="10.800000190734863" />
+         </font>
+      </Button>
+      <Button layoutX="10.0" layoutY="117.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="270.0" text="POUR AJOUTER UNE RESERVATION :" textFill="#1adf37">
+         <font>
+            <Font name="System Bold" size="12.800000190734863" />
+         </font>
+      </Button>
+      <Button layoutX="300.0" layoutY="117.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="270.0" text="POUR SUPPRIMER UN RESERVATION :" textFill="#e13232">
+         <font>
+            <Font name="System Bold" size="12.800000190734863" />
+         </font>
+      </Button>
+      <ImageView fitHeight="83.0" fitWidth="222.0" layoutX="390.0" layoutY="2.0">
+         <image>
+            <Image url="@../../../../../../Desktop/reservation-grunge-rubber-stamp-on-260nw-1611464203.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
