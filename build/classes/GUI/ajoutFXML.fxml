@@ -4,13 +4,11 @@
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="582.0" prefWidth="600.0" style="-fx-background-color: #28252e;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjoutFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="582.0" prefWidth="600.0" style="-fx-background-color: #009999;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.AjoutFXMLController">
    <children>
       <HBox layoutX="3.0" layoutY="29.0" prefHeight="79.0" prefWidth="594.0" style="-fx-border-color: #0fea88; -fx-border-width: 7;" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0">
          <children>
@@ -19,7 +17,7 @@
                   <Font name="Times New Roman Bold" size="37.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" onAction="#AjoutTransportCommunpaneShow" prefHeight="67.0" prefWidth="394.0" style="-fx-background-color: #4e5a51;" text="Transport Commun" textFill="WHITE">
+            <Button mnemonicParsing="false" onAction="#AjoutTransportCommunpaneShow" prefHeight="67.0" prefWidth="394.0" style="-fx-background-color: #009999;" text="Transport Commun" textFill="WHITE">
                <font>
                   <Font name="Times New Roman Bold" size="37.0" />
                </font>
@@ -30,30 +28,30 @@
          <children>
             <DatePicker fx:id="date" layoutX="318.0" layoutY="104.0" prefHeight="44.0" prefWidth="218.0" promptText="Date Réservation" />
             <ComboBox fx:id="modele" layoutX="50.0" layoutY="104.0" prefHeight="44.0" prefWidth="196.0" promptText="Choisir Modéle" />
-            <TextField fx:id="prixvoiture" layoutX="50.0" layoutY="206.0" prefHeight="54.0" prefWidth="196.0" promptText="Prix/jour" />
+            <TextField fx:id="prixvoiture" layoutX="50.0" layoutY="206.0" onAction="#clean" prefHeight="54.0" prefWidth="196.0" promptText="Prix/jour" />
             <TextField fx:id="nbrjours" layoutX="318.0" layoutY="203.0" prefHeight="54.0" prefWidth="218.0" promptText="Nombre de jours" />
-            <Button fx:id="ajoutVoiture" layoutX="180.0" layoutY="358.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="187.0" style="-fx-background-color: #0fea88;" text="Ajouter" textFill="WHITE">
+            <Button fx:id="ajoutVoiture" layoutX="12.0" layoutY="350.0" mnemonicParsing="false" onAction="#ajouterVoiture" prefHeight="51.0" prefWidth="570.0" style="-fx-background-color: #0fea88;" text="Ajouter une nouvelle Voiture" textFill="WHITE">
                <font>
                   <Font name="Times New Roman Bold" size="33.0" />
                </font>
             </Button>
+            <TextField fx:id="matricule" layoutX="180.0" layoutY="31.0" prefHeight="44.0" prefWidth="196.0" promptText="Matricule" />
+            <Button layoutX="444.0" layoutY="31.0" mnemonicParsing="false" onAction="#clean" prefHeight="44.0" prefWidth="110.0" style="-fx-background-color: #0fea88;" text="Clean" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="paneTC" layoutX="14.0" layoutY="118.0" prefHeight="460.0" prefWidth="570.0">
+      <AnchorPane fx:id="paneTC" layoutX="14.0" layoutY="118.0" prefHeight="460.0" prefWidth="570.0" style="-fx-background-color: #009999;">
          <children>
             <TextField fx:id="prixbillet" layoutX="322.0" layoutY="98.0" prefHeight="44.0" prefWidth="218.0" promptText="Prix billet (TND)" />
             <TextField fx:id="capacité" layoutX="376.0" layoutY="186.0" prefHeight="44.0" prefWidth="110.0" promptText="Capacité" />
             <ComboBox fx:id="typecommun" layoutX="322.0" layoutY="264.0" prefHeight="44.0" prefWidth="218.0" promptText="Type" />
-            <Button fx:id="ajoutcommun" layoutX="83.0" layoutY="356.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="437.0" style="-fx-background-color: #0fea88;" text="Ajouter" textFill="WHITE">
+            <Button fx:id="ajoutcommun" layoutX="193.0" layoutY="356.0" mnemonicParsing="false" onAction="#ajouterTransportCommun" prefHeight="51.0" prefWidth="209.0" style="-fx-background-color: #0fea88;" text="Add " textFill="WHITE">
                <font>
                   <Font name="Times New Roman Bold" size="30.0" />
                </font>
             </Button>
-            <ImageView fx:id="imgcomm" fitHeight="253.0" fitWidth="257.0" layoutX="36.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@large-green-arrow-download-button.png" />
-               </image>
-            </ImageView>
+            <ComboBox fx:id="lieuTrans" layoutX="52.0" layoutY="264.0" prefHeight="44.0" prefWidth="187.0" promptText="Lieu " />
+            <ComboBox fx:id="heureDisp" layoutX="52.0" layoutY="120.0" prefHeight="44.0" prefWidth="187.0" promptText="Heure de Disponibilité" />
+            <Button fx:id="affich" layoutX="411.0" layoutY="29.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="136.0" style="-fx-background-color: Gray;" text="More" />
          </children>
       </AnchorPane>
    </children>
